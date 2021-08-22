@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPJ - Editar</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h2 class="">Editar livro</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3">
+          <input type="text" class="form-control d-none" id="fromGroupId" />
+          <label for="fromGroupTitulo" class="form-label">Titulo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fromGroupTitulo"
+            placeholder="Titulo do livro..."
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupDescricao" class="form-label">Descrição</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupDescricao"
+            placeholder="Descrição do livro..."
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupPreco" class="form-label">Preço</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupPreco"
+            placeholder="12,50"
+            required
+          />
+        </div>
+        <div class="col-12">
+            <a href="index.html" class="btn btn-primary">Cancelar</a>
+          <button type="button" class="btn btn-primary" onclick="salvarLivro()">
+            Salvar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">RPJ</strong>
+          <small>agora</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Livro salvo com sucesso</div>
+      </div>
+    </div>
+    <script src="js/editar.js"></script>
+  </body>
+</html>
